@@ -1,0 +1,7 @@
+SELECT c.* 
+FROM Customers c, Orders o,OrderDetails od, Products p, Suppliers s 
+WHERE s.country = 'Brasil' and 
+p.SupplierID = s.SupplierID and 
+od.ProductID = p.ProductID and 
+o.OrderID = od.OrderID and 
+c.CustomerID = o.CustomerID;
